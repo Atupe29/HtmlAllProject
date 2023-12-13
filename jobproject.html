@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en" xmlns="https://www.thymeleaf.org">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Form</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            background-color: lightgreen;
+       margin: 0;
+       
+        }
+        h2{
+            background-color: forestgreen;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+        td{
+            padding: 7px;
+        }
+        input{
+            height: 20px;
+            border-radius: 10px;
+border: none;
+        }
+      input:focus,textarea:focus{
+        outline: none;
+        border: 1px solid forestgreen;
+      }  
+        textarea{
+            border-radius: 10px;
+        }
+        .button{
+background-color: forestgreen;
+color: white;
+font-size: 18px;
+padding: 0px 20px;
+border: none;
+}
+.button.hover{
+    cursor: pointer;
+    box-shadow: 5px 5px 5px;
+}
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Talathi Recruitment 2023, Talathi Bharti 2023 </h1>
+
+<form th:action="@{/StudentRegister}" th:object="${student}" method="post" >
+<div id="Personal-information">
+    <h2> Personal information</h2>
+<table width="100%">
+<tr> <td>ID:</td>
+    <td><input type="number" size="25" required></td>
+
+
+    <td>First Name:</td>
+    <td><input type="text" size="25" required></td>
+
+    <td>Middle Name:</td>
+    <td><input type="text" size="25"></td>
+<td>
+    Last Name:
+</td>
+<td><input type="text" size="25" required></td>
+
+</tr>
+<tr>
+    <td>Father Name:</td>
+    <td> <input type="text" size="25" required></td>
+
+    <td>Mother Name:</td>
+    <td> <input type="text" size="25" required></td>
+
+
+</tr>
+<tr>
+    <td>Current Address:</td>
+    <td>
+        <textarea rows="5" cols="25" required> </textarea>
+    </td>
+    <td>Parmant Address:</td>
+    <td>
+        <textarea rows="5" cols="25"></textarea>
+    </td>
+    
+</tr>
+<tr>
+    <td>Phone Numbers:</td>
+</tr>
+<tr><td>Home Phone Number:</td>
+<td><input type="text" size="25" required></td>
+<td>Mobile Number:</td>
+<td><input type="number" size="25" required></td>
+</tr> 
+<tr>
+    <td>Date of Birth:</td>
+    <td>
+        <input type="date" required>
+    </td>
+    <td>Place Of Birth:</td>
+    <td>
+        <input type="text" size="25" required>
+    </td>
+</tr>
+<tr>
+    <td colspan="2">Select Gender:</td>
+<td>
+    <input type="radio" name="gender" value="male">Male</td>
+    <td>
+        <input type="radio" name="gender" value="female">Female
+    </td>
+
+    </tr>
+    <tr>
+        <td>Highest Qualifications:</td>
+        <td>
+            <input type="text" size="25" required>
+        </td>
+        <td>Year Of Passing:</td>
+        <td><input type="date" size="25" required></td></d>
+    </tr>
+    <tr>
+<td>Language Known:</td>
+<td>
+    <input type="checkbox"  value="english"> English  
+</td>
+<td>
+    <input type="checkbox"  value="hindi"> Hindi  
+</td>
+<td>
+    <input type="checkbox" value="Marathi"> Marathi 
+</td>
+
+    </tr>
+    <tr>
+        <td>Select Your Hobbies:</td>
+        <td><input type="checkbox" value="Eating">Eating</td>
+        
+        <td><input type="checkbox" value="Playing">Playing</td>
+        
+        <td><input type="checkbox" value="Codeing">Codeing</td>
+
+
+    </tr>
+    <tr>
+        <td>About Yourself:</td>
+        <td colspan="3">
+<textarea rows="5" cols="50" required></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Nationality
+        </td>
+        <td>
+            <select>
+                <option>
+                    Indian
+                </option>
+                <option>US</option>
+                <option>Other</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Aaddarcard Number:
+        </td>
+        <td> <input type="number"></td>
+
+        <td>
+            Pancard Number:
+        </td>
+        <td> <input type="text" size="25"></td>
+        
+    </tr>
+</table>
+</div>
+<div id="education-details">
+    <h2>Edication Details:</h2>
+<table widrh="100%">
+<tr>
+    <td>SNo</td>
+    <td>Qulification</td>
+   
+    <td>Institute Univercity</td>
+    <td>Year Passing</td>
+    <td>Marks(%)</td>
+</tr>
+<tr>
+    <td>1</td>
+<td>
+    10th:
+</td>
+<td>
+    <input type="text" size="25">
+</td>
+<td>
+    <input type="month" >
+</td>
+
+<td>
+    <input type="number" min="0" max="100" size="25">
+</td>
+</tr>
+<tr>
+    <td>2</td>
+<td>
+    12th
+</td>
+<td>
+    <input type="text" size="25">
+</td>
+<td>
+    <input type="month" >
+</td>
+
+<td>
+    <input type="number" min="0" max="100" size="25">
+</td>
+</tr>
+<tr>
+    <td>3</td>
+<td>
+    Graducation:
+</td>
+<td>
+    <input type="text" size="25">
+</td>
+<td>
+    <input type="month" >
+</td>
+
+<td>
+    <input type="number" min="0" max="100" size="25">
+</td>
+</tr>
+<tr>
+    <td>3</td>
+<td>
+    Diploma:
+</td>
+<td>
+    <input type="text" size="25">
+</td>
+<td>
+    <input type="month" >
+</td>
+
+<td>
+    <input type="number" min="0" max="100" size="25">
+</td>
+</tr>
+</table>
+
+<div id="Exceprices Details">
+    <h2>Exceprices Details-1</h2>
+    <table width="100%">
+<tr>
+    <td>SNo</td>
+    <td>Compaany Address</td>
+    <td>Work / Role</td>
+    <td colspan="2">Duration (from to)</td>
+    
+</tr>
+<tr>
+    <td>1</td>
+    <td>
+        <textarea rows="5" cols="30"></textarea>
+    </td>
+    <td>
+        <textarea rows="5" cols="30"></textarea>
+    </td>
+    <td>
+<input type="month"> 
+    </td>
+    <td>
+        <input type="month">
+    </td>
+</tr>
+</div>
+</table>
+
+<div id="Exceprices Details">
+    <h2>Exceprices Details-2</h2>
+    <table width="100%">
+<tr>
+    <td>SNo</td>
+    <td>Compaany Address</td>
+    <td>Work / Role</td>
+    <td colspan="2">Duration (from to)</td>
+    
+</tr>
+<tr>
+    <td>1</td>
+    <td>
+        <textarea rows="5" cols="30"></textarea>
+    </td>
+    <td>
+        <textarea rows="5" cols="30"></textarea>
+    </td>
+    <td>
+<input type="month"> 
+    </td>
+    <td>
+        <input type="month">
+    </td>
+</tr>
+</div>
+</table>
+
+<div id="Exceprices Details">
+    <h2>Exceprices Details-3</h2>
+    <table width="100%">
+<tr>
+    <td>SNo</td>
+    <td>Compaany Address</td>
+    <td>Work / Role</td>
+    <td colspan="2">Duration (from to)</td>
+    
+</tr>
+<tr>
+    <td>1</td>
+    <td>
+        <textarea rows="5" cols="30"></textarea>
+    </td>
+    <td>
+        <textarea rows="5" cols="30"></textarea>
+    </td>
+    <td>
+<input type="month"> 
+    </td>
+    <td>
+        <input type="month">
+    </td>
+</tr>
+</div>
+</table>
+
+</div>
+<div id="Documents uplode">
+    <h2>Documents Upload</h2>
+<table width="100%">
+<tr>
+    <td>Aadharcard </td>
+    <td>  <input type="file" name="aadhar" accept=".pdf, .jpg, .jpeg, .png" required></td>
+</tr>
+
+<tr>
+    <td>Pancard</td>
+    <td>  <input type="file" name="pan" accept=".pdf, .jpg, .jpeg, .png" required></td>
+</tr>
+<tr>
+    <td>X marksheet</td>
+    <td>  <input type="file" name="x_marksheet" accept=".pdf, .jpg, .jpeg, .png" ></td>
+</tr>
+<tr>
+    <td>XII marksheet</td>
+    <td>  <input type="file" name="XII_marsheet" accept=".pdf, .jpg, .jpeg, .png" ></td>
+</tr>
+<tr>
+    <td>Gradcation marksheet</td>
+    <td>  <input type="file" name="Graducation" accept=".pdf, .jpg, .jpeg, .png" required></td>
+</tr>
+<tr>
+    <td>Photo</td>
+    <td>  <input type="file" name="photo" accept=" .jpg, .jpeg, .png" required></td>
+</tr>
+<tr>
+    <td>Signature</td>
+    <td>  <input type="file" name="signature" accept=".pdf, .jpg, .jpeg, .png" required></td>
+</tr><tr>
+    <td>Passbook</td>
+    <td>  <input type="file" name="Passbook" accept=".pdf, .jpg, .jpeg, .png" ></td>
+</tr>
+
+
+</table>
+</div>
+<div id="Other-details">
+    <h2>Other Details:</h2>
+<table width="100%">
+    <tr>
+        <td>Job Type</td>
+        <td><input type="radio" name="jobtype" value="parmanant">Permanant</td>
+        <td><input type="radio" name="jobtype" value="Contrat">Contarct</td>
+        <td><input type="radio" name="jobtype" value="other">Other</td>
+    </tr>
+    <tr>
+        <td>Date Of Joining</td>
+        <td>
+            <input type="date">
+        </td>
+
+        
+        <td>Time Of Joining</td>
+        <td>
+            <input type="time">
+        </td>
+    </tr>
+    <tr>
+        <td>Preferred Jo Location</td>
+        <td>
+            <input type="radio" name="joblocaton" value="pune">Pune
+        </td>
+        <td>
+            <input type="radio" name="joblocaton" value="Mumbai">Mumbai
+        </td>
+        <td>
+            <input type="radio" name="joblocaton" value="heydrabad">Heydrabad
+        </td>
+
+    </tr>
+    <tr>
+        <td>Willing to Relocate to Hyderabad</td>
+        <td>
+            <input type="radio" name="relocation" value="Yes">Yes
+        </td>
+
+        <td>
+            <input type="radio" name="relocation" value="no">No
+        </td>
+    </tr>
+    
+    
+
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+        <td>
+            This is inform that, All the above mentionedis correct my knowledge.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <td>
+                <input type="submit"  value="Submit" class="button">
+            </td>
+            <td>
+                <input type="reset"  value="Reset" class="button">
+            </td>
+
+        </td>
+    </tr>
+</table>
+
+</div>
+<div id="main-footer">
+    <h2>Copyright & copy:2023, Talathi Bharti 2023</h2>
+    <p style="text-align: center;">All Rights Reserved</p>
+<p style="text-align: center;">Deeloped & Maintained By Arjun Tupe</p>
+</div>
+</form>
+</body>
+</html>

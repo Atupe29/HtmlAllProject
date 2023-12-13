@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Upload Form</title>
+</head>
+<body>
+
+    <h2>Document Upload Form</h2>
+
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <label for="aadhar">Aadhar Card:</label>
+        <input type="file" name="aadhar" accept=".pdf, .jpg, .jpeg, .png" required><br>
+
+        <label for="pan">Pan Card:</label>
+        <input type="file" name="pan" accept=".pdf, .jpg, .jpeg, .png" required><br>
+
+        <label for="x_marksheet">X Marks Sheet:</label>
+        <input type="file" name="x_marksheet" accept=".pdf, .jpg, .jpeg, .png" required><br>
+
+        <label for="xi_marksheet">XI Marks Sheet:</label>
+        <input type="file" name="xi_marksheet" accept=".pdf, .jpg, .jpeg, .png" required><br>
+
+        <label for="15_marksheet">15th Marks Sheet:</label>
+        <input type="file" name="15_marksheet" accept=".pdf, .jpg, .jpeg, .png" required><br>
+
+        <label for="photo">Photo:</label>
+        <input type="file" name="photo" accept=".jpg, .jpeg, .png" required><br>
+
+        <label for="signature">Signature:</label>
+        <input type="file" name="signature" accept=".jpg, .jpeg, .png" required><br>
+
+        <input type="submit" value="Upload Documents">
+    </form>
+
+</body>
+</html>
